@@ -6,6 +6,7 @@ export default function Blogpost({ title, coverphoto, slug, url, content, }) {
         <div className={styles.cardMainDiv} >
         
             <div className={styles.title}>
+                <h1>Heading</h1>
                 <h2>{title}</h2>
             </div>
        
