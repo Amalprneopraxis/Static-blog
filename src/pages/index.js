@@ -3,7 +3,6 @@ import styles from '@/styles/Home.module.css'
 import {GraphQLClient,gql} from 'graphql-request';
 import Blogcard from '../../components/Blogcard';
 import React from 'react';
-import { GetStaticPaths } from 'next';
 
 const graphcms = new GraphQLClient("https://api-ap-south-1.hygraph.com/v2/clemi9tt321t801uhbxmqaykf/master");
 const QUERY = gql`
@@ -39,7 +38,7 @@ export async function getStaticProps() {
     props:{
       posts,
     },
-    revalidate: 10,
+  
   };
 }
 export default function Home({posts}) {
